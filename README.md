@@ -2,6 +2,10 @@
 
 The Weather App is a simple web application that displays weather information using the OpenWeatherMap API.
 
+## Preview
+
+https://agunity-weather.vercel.app/
+
 ## How to Run
 
 1. Clone the repository to your local machine:
