@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Weather App</title>
+
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <main class="content-grid">
+      <!-- Header Section-->
+      <section id="hero-section" class="full-width hero-section">
+        <div class="hero-content">
+          <h1 id="clock-time"></h1>
+          <p id="place-name"></p>
+        </div>
+
+        <!-- Search Field -->
+        <div class="search-container">
+          <div class="search-blur"></div>
+          <input
+            id="search-field"
+            onchange="searchWeather()"
+            autofocus
+            placeholder="Enter a place"
+          />
+          <img
+            class="search-icon"
+            src="assets/icons/search.svg"
+            onclick="searchWeather()"
+          />
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section id="cards-section" class="cards-section"></section>
+    </main>
+  </body>
+</html>
