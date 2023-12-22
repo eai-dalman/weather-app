@@ -88,7 +88,7 @@ function createCard(options) {
     }
     // Design
     var template = document.createElement("template");
-    template.innerHTML = "\n  <div class=\"card-container\">\n    <img class=\"card-icon\" src=\"".concat(icon, "\" />\n    <div class=\"card-content\">\n      <span class=\"card-text-head\">").concat(headText, "</span>\n      <span class=\"card-text-body\">").concat(bodyText, "</span>\n      <span class=\"card-text-footer\">").concat(footerText, "</span>\n    </div>\n  </div>");
+    template.innerHTML = "\n  <div class=\"card-container\">\n    <img class=\"card-icon\" src=\"".concat(icon, "\" alt=").concat(iconName, " />\n    <div class=\"card-content\">\n      <span class=\"card-text-head\">").concat(headText, "</span>\n      <span class=\"card-text-body\">").concat(bodyText, "</span>\n      <span class=\"card-text-footer\">").concat(footerText, "</span>\n    </div>\n  </div>");
     // Render
     var card = template.content.firstElementChild;
     var container = document.getElementById("cards-section");
