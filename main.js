@@ -200,6 +200,10 @@ function displayCards(searchQuery) {
             switch (_o.label) {
                 case 0:
                     _o.trys.push([0, 2, , 3]);
+                    // Default animation
+                    if (document.startViewTransition) {
+                        window.document.startViewTransition();
+                    }
                     return [4 /*yield*/, getWeather(searchQuery)];
                 case 1:
                     data = _o.sent();

@@ -43,6 +43,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: var(--dark-text);
+  scroll-behavior: smooth;
 }
 
 .hero-section {
@@ -90,6 +91,7 @@ body {
   background-color: var(--primary-bg);
   padding: 0.7rem;
   border-radius: 100%;
+  user-select: none;
 }
 
 .search-container .search-blur {
@@ -142,7 +144,6 @@ body {
   flex: 1;
 
   border-radius: 2rem;
-  background-color: red;
   background: var(--primary-bg);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
 
@@ -150,6 +151,12 @@ body {
   align-items: center;
   gap: 2rem;
   transition: all 1s;
+
+  animation: fade-in linear forwards;
+  animation-timeline: view(y);
+  animation-range: entry;
+  scale: 0.8;
+  opacity: 0;
 }
 
 .card-container .card-icon {
@@ -157,6 +164,8 @@ body {
   height: 3.5rem;
   border-radius: 3.5rem;
   object-fit: scale-down;
+  pointer-events: none;
+  user-select: none;
 }
 
 .card-content {
@@ -188,4 +197,13 @@ body {
   transition: all 0.5s ease-in-out;
   color: var(--light-text);
   background-color: var(--error-bg);
+}
+
+/* Animation */
+
+@keyframes fade-in {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
 }

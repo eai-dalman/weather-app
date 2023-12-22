@@ -54,7 +54,7 @@ function createCard(options: {
   const template = document.createElement("template");
   template.innerHTML = `
   <div class="card-container">
-    <img class="card-icon" src="${icon}" />
+    <img class="card-icon" src="${icon}" alt=${iconName} />
     <div class="card-content">
       <span class="card-text-head">${headText}</span>
       <span class="card-text-body">${bodyText}</span>
@@ -187,6 +187,12 @@ function getTemperatureDetails(tmpKelvin: number): {
  */
 async function displayCards(searchQuery: string): Promise<void> {
   try {
+    // Default animation
+    if ((document as any).startViewTransition) {
+      (window.document as any).startViewTransition();
+    }
+
+    // Fetch data from API
     const data = await getWeather(searchQuery);
     window.localStorage.setItem("prev-search-query", searchQuery);
 
